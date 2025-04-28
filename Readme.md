@@ -56,5 +56,27 @@ module.exports=orange;
 
 again error come because these above method wrong like in usa.js 
 const orange="100kg";
-export default orange;  now project runnning successfully .
+export default orange; 
+and in main.js import orange from "./usa.js"; now project runnning successfully .
+
+
+#### and above case is related to that when you want to import sigle thing but if yoyu want to import more than one thing then you can do like this 
+
+like 
+in usa.js 
+export {orange,mango};
+in main.js i also use allimports also like 
+import asllimports from "./usa.js";
+and 
+console.log(allimports.orange);
+and in usa.js you can also write this like object also 
+export {"orange":orange,"mango":mango};
+
+also ike if you export many thing but you want only one thing import then import like this 
+
+export {orange,mango};
+and in main.js 
+
+import {orange} from "./usa.js";
+
 
