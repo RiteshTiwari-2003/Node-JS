@@ -79,4 +79,22 @@ and in main.js
 
 import {orange} from "./usa.js";
 
+in your faimly like a mother is a thread , she is like a single thread 
+i know there is father , both parent are importent but in this case i am treating just mother why mother is like a main thread 
+and she has to do lot of thing in house , father will got o outside he will try to earn mondey , i am considering here mother is a housewife , so she has to do lot of things , she has to take care o children , everything but she is alone 
+she is single threaded main thread 
+
+synchronous approach : in synchronous approach what will your mother do , she will start to cook , she has to wait in kitchen 
+till the cooking is complete to do the second work , one after another because one work complete then after this she do other work
+synchronous means step by step , first step complete to go to the second step 
+but sometimes we need to do things parallely , like two things parallely how you do you need two people , two thread ,
+you need multithreading threaded envoirment 
+
+multithreaded means father come here father is coming for helping mother even though mother ismain thread , like father independently do some other work when your mother is cooking , like your father can wash the cloath 
+
+whe you say about node js then it is single threaded but in reality it is not , it is single threaded but internally it uses multithreaded , we are working in asynchronous pattern 
+
+it means that whenever that means when your mother when she start cooking , she will not be in kitchen for two hours , she will start to boil some vegitable but she will not wait there till it boil , she will come out and she will start washing cloathes , she will switch on and put all cloathes into washing machine 
+she can move on from one work to another work 
+
 
