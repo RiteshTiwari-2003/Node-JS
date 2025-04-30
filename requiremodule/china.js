@@ -20,5 +20,12 @@ allImports.carfunc();
  * const vikram=require("./india.js")
  * console.log(vikram); // then in this all export things store into vikram this is called as default import 
  * 
+ * like sometimes india import mobile from chinabut after import india renameed it or rebrand it then like this one more case 
+ * 3rd case:
+ * const {phones:indian}=require("./india.js")
+ * console.log(indian);
  * 
+ * now in above i learned about common js pattern 
+ * 
+ * now same thing i learned from module js pattern 
  */
