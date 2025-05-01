@@ -96,5 +96,49 @@ whe you say about node js then it is single threaded but in reality it is not , 
 
 it means that whenever that means when your mother when she start cooking , she will not be in kitchen for two hours , she will start to boil some vegitable but she will not wait there till it boil , she will come out and she will start washing cloathes , she will switch on and put all cloathes into washing machine 
 she can move on from one work to another work 
+whenever the vegitable are boiled , she can come back to kitchen and resume from there 
 
+so asynchronously without waiting for one work to complete , she can hop over , like she can start one work , let it complete , it will take its own time 
+like i write a code 
+
+function apple(){
+    return "hi"
+}
+const result=apple();
+console.log(result)
+
+like in above code when i remove line 105 return "hi" then function what return it return undefined 
+
+settimeout() function so in this function we pass the two argument in which one is function so this is called call back function like when you pass one function as a argument of anotyher function this is called callback function 
+
+setTimeout(()=>{console.log("Hi after 2000 mii second");},2000);
+setInterval(()=>{console.log("print this every 2000 mili second");},2000)
+like 
+function serveMeFood(){
+    console.log("dinner");
+}
+console.log("Hi");
+setTimeout(servemeFood,3000);
+console.log("BYe");
+
+then out put is print ed like this
+hi
+bye
+printed and after 3 second dinner is printed    , so this is asynchronous because this is not waited for settimeout function will executed it execute next statement after settimeout , you can call settimeout like ananymous function like 
+
+setTimeout(function serveMeFood(){
+    console.log("dinner");
+},3000);  
+setTimeout(function (){
+    console.log("dinner");this function has no name then it is called ananymous function 
+},3000); 
+also called like this 
+setTimeout(()=>{
+    console.log("dinner");//this is called fat arrow function 
+},3000);
+
+setInterval(()=>{
+    console.log("serve me food");
+},2000);
+so after every 2 second serve me food printed continuously 
 
