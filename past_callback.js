@@ -26,3 +26,24 @@ boilWater((step1Result)=>{
         });
     });
 });// so this made complex nested loop chain so this is call calllback hell
+
+function vikram(callback){
+    setTimeout(()=>{
+        console.log("task1 is completed");
+        callback("100 rupees");
+    },2000);
+}
+function abdul(previousStepResult,callback){
+    setTimeout(()=>{
+        conaole.log(`abdul recieved ${previousStepResult}`);
+        callback("50 rupees");
+    },5000);
+}
+function ramesh(previousStepResult){
+    console.log(`finally i got my money from abdul ${previousStepResult}`);
+}
+vikram((moneyFromVikram)=>{
+    abdul(moneyFromVikram,(moneyFromAbdul)=>{
+        ramesh(moneyFromAbdul);
+    });;
+})
