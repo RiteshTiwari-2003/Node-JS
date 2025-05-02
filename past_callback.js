@@ -13,18 +13,16 @@ function drainWater(previousStepResult,nextStep){
     const step3Result="Drained the pasta";
     nextStep(step3Result);
 }
-function addSauceandServe(previousStepResult,nextStep){
+function addSauceandServe(previousStepResult){
     console.log(`added sauce in ${previousStepResult} and served.`);
     const step4Result="Delicious Pasta";
-    nextStep(step4Result);
+    console.log("final result:"+step4Result);
 }
 //next step chaining (passing data)
-boilWater((boiledWater)=>{
-    addPasta(boiledWater,(cookedPasta)=>{
-        drainWater(cookedPasta,(drainedpasta)=>{
-            addSauceandServe(drainedpasta,(finalDish)=>{
-                console.log(`final dish: ${finalDish}`);
-            });
+boilWater((step1Result)=>{
+    addPasta(step1Result,(step2Result)=>{
+        drainWater(step2Result,(step3Result)=>{
+            addSauceandServe(step3Result);
         });
     });
 });// so this made complex nested loop chain so this is call calllback hell
