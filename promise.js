@@ -61,3 +61,39 @@ boilWater((boiledWater)=>{
 boilWater().then(addpasta).then(drainWater).then(addSauceAndServe).then((finalDish)=>{
     console.log(`final dish is ${finalDish}`);
 })
+
+
+//promise 
+function vikram(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("task1 is completed");
+            resolve("100 rupess");
+        },2000);
+
+    });
+}
+function abdul(previousStepResult){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log(`abdul receiver ${previousStepResult}`);
+            resolve("50 ruppees");
+        },5000);
+    });
+
+}
+function ramesh(previousStepResult){
+    console.log(`finally i got my money from abdul ${previousStepResult}`);
+}
+vikram().then(abdul).then(ramesh);
+
+/* in async await you can upgrade promise code like this like 
+async function transactionFlow(){
+const moneyFromVikram=await vikram();
+const moneyFromAbdul=await abdul(moneyFromVikram);
+ramesh(moneyFromAbdul);
+// like await means like vikram() immediatlu return promise but i not want promise so whenever vikram resolve the promise then await allow function 
+to execute
+}
+transactionFlow();
+*/
