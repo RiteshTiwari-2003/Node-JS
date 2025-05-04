@@ -16,3 +16,25 @@ fs.writeFile('output.txt','hello node js async','utf8',(err)=>{
     }
     console.log("file written successfully(async)");
 });
+
+/**now for appending text into file
+ * synchronous
+ * const fs=require('fs');
+ * try{
+    fs.appendFileSync('output.txt','/nHello,this is a test file hb','utf8');
+    console.log("file appended successfully(sync)");
+}
+catch(err){
+    console.error("Error appending file",err);
+}
+
+asynchronous 
+fs.appendFile('output.txt','/nhello node js async','utf8',(err)=>{
+    if (err){
+        console.log(err);
+        return ;
+    }
+    console.log("appending  successfully(async)");
+});
+
+ */
