@@ -37,4 +37,13 @@ fs.appendFile('output.txt','/nhello node js async','utf8',(err)=>{
     console.log("appending  successfully(async)");
 });
 
+
+like we can aslo do code synchronous without using appendFileSync only by using appendFile like using promise and then 
+const fs=require('fs').promises;
+//synchronous 
+try{
+fs.appendFile('output.txt','/nhello node js async','utf8').then(()=>{
+    console.log("appending text sync");});}
+    catch(err){
+    console.error(err);}
  */
