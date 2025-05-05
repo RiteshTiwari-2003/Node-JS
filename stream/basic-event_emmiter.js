@@ -8,4 +8,4 @@ eventemitter.on('fire',()=>{
     console.log('fire event has been fired');
 });
 // fire a event
-eventemitter.emit('fire');
+eventemitter.emit('fire'); 
