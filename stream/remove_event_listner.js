@@ -22,4 +22,8 @@ eventEmitter.off('ndtv',(content)=>{
  * eventEmitter.emit('ndtv','apple party won the election');
  * 
  * then i have not got this notification because i have unsubscrib channel before this event happen 
+ * 
+ * now i explain once method of eventemitter
+ * 
+ * 
  */
