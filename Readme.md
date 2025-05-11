@@ -142,3 +142,48 @@ setInterval(()=>{
 },2000);
 so after every 2 second serve me food printed continuously 
 
+### process and program 
+a set of code or instruction or statement is program but when i run the program then that running program called as process 
+process is created by os and each process assigned id process id .
+what is the background process this is the process which needed to proper functioning of your os like camera and printer every one need driver so in the background lots of programm are running and when program is running then it is called process
+
+but when it is running as background it is called background process 
+
+what about foreground process foreground process are app , 
+like when you want to your program to run then you need some resources , when you go into task manager in your pc then in that what kind of resources we need we  need cpu , memory, disk , network 
+
+what is cpu?
+so your program from hard disk will be loaded each instruction whatever it have , now calculation, who is doing the calculation ?
+cpu is doing it for run your program , execute the instruction you need cpu so each process willbe assign cpu 
+
+what is memory?
+when you do calculation you use variable when you go into low label programing there resiter , basically ram , ram is needed 
+ram is needed why each instruction has to be loaded from your file system , 
+instruction will be loaded in file system qand from file system to ram and within the ram you have register so all these called memory register , ram , everything under memory 
+
+what is disk?
+some program needs to have access the file system like we were learning about fs module ? so disk will also needed disk means it is hard disk where your files are saved 
+so every program when it is runnning it need resources to function properly 
+
+what is network?
+ets say i am using google chrome then chrome for transforming information from one place to another or from one person to another need network 
+
+process will not be promises to run program forever , a process will be like , if i run a program lets say it has only 10 line 
+it will execute al those 10 line like in file and stream we copy a file into another file then like take 5 second to copy then till 5 second my process was lio , after completing the last instruction my process was killed by operating system 
+and all the resources were freed 
+when the program complete its operation the process will be killed by operating system so al th resources which were assign to the process freed up 
+so you know process will not be running 24 7 process will start from line number 1 it will do all the work , it will execute all the instruction and when it is completed it is exit 
+so what about those process which is like a process but it will not exit it will keep runing , it is expected to run forever 
+like if i start now i will not kill it 
+it is expected to run forever 
+do we have such process so what are those spacial process are called? 
+they are called services , it will run forever so what it will do it will handle some request it will do service 
+if someone want some service from program then they will do request they will send the request to the services 
+and services will be prov ide the program the request response willbe provide by the service 
+
+lets check in real example like hospital provide service , whether it is process or service , it is service , why it is service because you expect that hospital will be open for 24 7 , and what type of service it provide it provide medical service ,
+you have to request fo service only , when you request for the service you will get the respinse from the hospital 
+
+each service i sknown for handle thhe request process the request and then respind to the request , who will be making the request , client 
+these is called as server program , who will be making the request to them is called client program
+so this is client server architecture , in the hospital hospital will be server program , patient are requesting for medial service then it is client program 
