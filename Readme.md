@@ -187,3 +187,13 @@ you have to request fo service only , when you request for the service you will 
 each service i sknown for handle thhe request process the request and then respind to the request , who will be making the request , client 
 these is called as server program , who will be making the request to them is called client program
 so this is client server architecture , in the hospital hospital will be server program , patient are requesting for medial service then it is client program 
+
+### file server
+i a staritng with file server , what is file server 
+every server has its own purpose , hospital has its own purpose what is purpose they offer medical service 
+
+like this there are fileserver , what is purpose the purpose is serve files to client 
+in file server whoever want the file is client 
+like i will create file server program i have running it , this program willnot stop , until i forcefully kill it 
+in ideal case file server running 24 7 hours .
+from browser i wl try to make request to the file server program , and file server program send the program   http protocals
