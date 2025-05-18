@@ -197,3 +197,25 @@ in file server whoever want the file is client
 like i will create file server program i have running it , this program willnot stop , until i forcefully kill it 
 in ideal case file server running 24 7 hours .
 from browser i wl try to make request to the file server program , and file server program send the program   http protocals
+so which protocal youb used ofr this service http protocal 
+so every service has its own protocal , so in case of ile server i am using browser so i am using http based server http protocal 
+lets say my mother or father want to access some file from my laptop then they can open these files using their mobile 
+how from their mobile they will make a request they will open the brwoser browser is client it will make a request to my program my computer basically on my ip address and each server when it comes on ip address every compiuter its own unique ip address even in local you have private ip address 
+when request made to my ip address , it will only reach to myc computer or laptop , 
+
+ip address is oly hep to forward the pocket or request till my laptop but inside my laptop i have operating system 
+within my operating system i have multiple program there is lot of services how to my mother's browser know that it has to communicate with specific server it should not send a request to different service so this is happpening with port number 
+port number is importent to uniquly forward the request to service , each service should running on different port number you can not have two service or two program running on same port number 
+http protocal + ip address + [port number  ] if you know these thing then they can access ant file 
+
+### http status code 
+400 bad request      client sent an invalid request 
+401 unauthorized     authentication is required 
+403 forbidden        ckient does not have access 
+404 not found        the requested resource doen not exist 
+405 method not allowed    http method not allowed on this resource
+408 request time out     server timed out waiting for the request 
+429 too many request     cient has sent tomany request in sort time 
+500 internal server error   generic server error 
+502 bad gateway      server received an invalid response from another server 
+503 server unavailable     server is temporarily overloaded or down.
