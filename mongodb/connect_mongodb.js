@@ -12,4 +12,5 @@ async function connectDB(){
     finally{
         await client.close();
     }
-}
+}// you need to first install mongo db like npm install mongodb and npm install mongoose 
+connectDB(); 
