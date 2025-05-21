@@ -1,0 +1,3 @@
+#### how to install mongodb 
+go to this link on browser  https://mongodb.com/try/download/community 
+now when you go to that url page then select that for which like linux window tou want to download

@@ -219,3 +219,17 @@ http protocal + ip address + [port number  ] if you know these thing then they c
 500 internal server error   generic server error 
 502 bad gateway      server received an invalid response from another server 
 503 server unavailable     server is temporarily overloaded or down.
+
+### what is the difference between normal function and apis?
+
+you need to understand that a function is a group of statement or a logic which can be run to perform any task , so you will create a specific task you will create a sepecific function .
+when you run the function when you call the function , it will give the result and what is the api 
+when you call the api it is perform some operation like function so both are corelated but api is more powerfull ,
+why because function means when you have a script you can all the function within script or you can import in other file you can call the function 
+only to within your project or whoever import it in them but api are exposed into internet , what does that means , 
+it means that if someone is in your network , okay i mean specific wifi if my friend or my mother are using same wifi , 
+they will able to call the api from their local machine this is the advantage , function means i only call in my project or some project where i import it but api can be called from other system within the network .
+
+if my laptop is connected to public ip i was assigned to a public ip address then anyone in entire world can call the api 
+if i exposed my laptop to the internet then you can call the my api my local machine api from your laptop from your mobile 
+basically api are internally it kind of function they are also return some logic or result but it return result over the internet 
