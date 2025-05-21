@@ -17,3 +17,10 @@ async function updateData(){
     }
 }
 updateData();
+/**if we want to update many data like all those data which age is greater than or equal to 15 set the age 19
+ * 
+ * const result=await students.updateMany({
+            age:{$gte:15}
+        },
+    {$set:{age:100}});
+ */
