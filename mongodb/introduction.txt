@@ -1,3 +1,21 @@
 #### how to install mongodb 
 go to this link on browser  https://mongodb.com/try/download/community 
-now when you go to that url page then select that for which like linux window tou want to download
+now when you go to that url page then select that for which like linux window tou want to download  now i have go into file exploreer and and click on that download file
+o open mongodb compas  so click on plus(+) in left sidebar a new connectin page open in url give the url for my service you remmeber when you use get post deete then you need to give this url
+so same when i want to use database then first know where is my database connect so in url is first part is protocal where we are learning http 
+so protocal is http but in case of mongo db protocal is mongodb  and after that ://localhost:  like where at the place of localhost you have to give the ip address
+lets you have connect to your computer with your friend computer then give the public ip address of your firend laptop
+
+and every service we have a port number then so here when you comes to mongodb they have a port number called 27017
+this is standard port you can configure it in different way and then i have click on save and connect 
+when you add then bydefault in this localhost or url there is three database one is admin one is config one is local 
+
+its a cient server architecture so client come in three form one is graphical gui graphical user interface basically graphical client this mono compas is graphical client 
+like you need to click on buttons only like in above created new connection like localhost270107  when you go on that connection then in this click on + icon for creating database 
+
+the other one is command line command line interface is theere  this will be done by databse admin databse admin knowning databse query 
+you need not to learn any language 
+
+third option is bia source code source code means via library this is specific to programming language if you are using python then install to python specific library 
+but right now we are interested in node js so know node js library 
+
