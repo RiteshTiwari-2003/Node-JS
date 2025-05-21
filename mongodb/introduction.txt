@@ -17,5 +17,29 @@ the other one is command line command line interface is theere  this will be don
 you need not to learn any language 
 
 third option is bia source code source code means via library this is specific to programming language if you are using python then install to python specific library 
-but right now we are interested in node js so know node js library 
+but right now we are interested in node js so know node js library so you shoud install third party library which are related to node js you need to install client programming
+as you install mongo db step step by step so server is also already installed 
+
+you have go to task manager i task manager there is two section one is processes and one is services services are expected to ru 24 7 
+
+so this background service running in the background . we will be connecting our client program , whether it is using mongo compas or using library 
+so we got to know that even database is client server architecture 
+basically client ins running in the browser when it comes to http and server will be running hardware hosted in a hardware basicaly laptop virtual machine cloud 
+
+now lets go to the graphical user interface in mongodb compas 
+here lets say i want to create database like in past i create new connectin that part go and clickn  on + icon i said i want to create school name database and within the school i want student name table or collection 
+
+there will be a database in your database you organize the data how do you organiza your data ?
+so database is school and tables are these 
+students, teachers, departemtns 
+students table column=  name(string), age(integer), subjects(array)
+teachers table column= name ,age experience 
+departments table column= name 
+and each coumn have a data type
+every data will have shape and shape is what structure structure is what schema 
+structure of data= schema , so what is schema? schema will define what is the table name what are all the columns and in the columns what should be the datatypes of each value 
+this information is stored as part of schema , these are all relational database concept like when you write schema for only three column and you will try to add one more column 
+then it doen not allow because it is not part of schema schema define the shape of the table 
+
+
 
