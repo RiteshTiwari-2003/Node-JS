@@ -42,4 +42,53 @@ this information is stored as part of schema , these are all relational database
 then it doen not allow because it is not part of schema schema define the shape of the table 
 
 
+and tables means collections and ech tables have multiple columns when you think about columns it is properties and rows in the table have mutiple rows 
+multiple rows is called as records or documents
+so i have create school database in schooldatabase i have create student table or collection 
+so school is created and within the school student table is created ,when you come on database on school then when you click on + icon then you can add 
+more collections or table liken  also add teachers table and i can add departments also and when you go in each table like if you click any of the collection then a add data button come 
+if you click on this then you can add or insert each datta into tables when you click on add data then two option is come import json or csv file or insert document 
+and when you click on insert document then it look like json object like within mongodb you can add data like a json 
+{
+    "name":"vikram",
+    'age":"36",
+    "subjects":["english","hindi"]
+
+}
+so this document called as one row and each row have three column properties  name , age , subjects   and now when you click on insert then it added on mongodb as a one document
+when you insert a document then automatically one coolumn additionaly added which is _id   which is created by mongo db which is have unique id 
+you can also add array of multiple document like when you click on add data and insert document then like this 
+[
+   {
+    "name":"vikram",
+    'age":"36",
+    "subjects":["english","hindi"]
+
+}, 
+{
+    "name":"suraj",
+    'age":"26",
+    "subjects":["english","math"]
+
+}
+]
+and when you click on add then all document s added in mongo db and in each added document you can also see one additional column  which i s_id which is added by mongodb automaticaly 
+
+and in mongodb where all document s insert you can go on each document then in each document in right above corener also delete and edit option given you can also edit the each document and deleteeach document whatwever 
+you want 
+like there is also option of copy when you cllick on any added document copy icon and when you edit name and again save then a seperate documebt  added one more clone document
+which allow you to clone the document and you allow to do minar changes so this is the plus point what is the minus point minus point is disadvantage of mongodb compas miar points is 
+when you try to edit any document disadvantage of this mongodb compas is if you added like such document  which is not related to schema or which is not follow schema and when you click on add then it all also 
+added without any restriction 
+because by default it is not any restriction and validation bydefault mongodb not reject any data by default you can insert any json data in any collection 
+
+so we got to  know how to use client program how to use client program is one graphical user interface now i will go to library we willlearn how to interact with databse with library 
+so in past i use mongo compass for add databse add collection inser tdata using gui client program so whatever i perform using mongodb compas now i will perform same thing using progrsmming language 
+1)- nodejs -> mongo db library , mongoose library 
+ongodb ike a native library or official library , which gave only the core and main mongodb operations 
+whatever you do from ui you do from mongodb library , there is one more library cllled as mongoose but there is third part library mongoose in mostr online project we use mongoose not mongodb 
+beacause mongodb have not validation but when you use mongoose there is validation 
+mongodb (no validaion , no type cheking , no schema ) there is alsoone library mongoose which is widely used because of validation and  schema although we are using no sql we need to validation data type checking and scema in mongoose 
+
+
 
