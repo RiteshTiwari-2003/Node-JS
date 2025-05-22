@@ -91,4 +91,8 @@ beacause mongodb have not validation but when you use mongoose there is validati
 mongodb (no validaion , no type cheking , no schema ) there is alsoone library mongoose which is widely used because of validation and  schema although we are using no sql we need to validation data type checking and scema in mongoose 
 
 
+mongoose library internally used mongo db 
+
+
+
 
