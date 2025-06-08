@@ -233,3 +233,10 @@ they will able to call the api from their local machine this is the advantage , 
 if my laptop is connected to public ip i was assigned to a public ip address then anyone in entire world can call the api 
 if i exposed my laptop to the internet then you can call the my api my local machine api from your laptop from your mobile 
 basically api are internally it kind of function they are also return some logic or result but it return result over the internet 
+
+## node modue packages build in packages 
+1. path
+2. fs
+3. http
+4. url
+5. querystring
