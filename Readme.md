@@ -240,3 +240,8 @@ basically api are internally it kind of function they are also return some logic
 3. http
 4. url
 5. querystring
+1. path:  the path module is used to deal with difference in file path between multiple os .
+2.  fs module: fs module is used to perform file i/o based opertion
+3. http : http module is used to create a small and lightweight http server  in node. 
+4. url : the url module is used to parsing , manipulating and dealing with web address(url)
+5. quierystring : quiry string module is used to parse and work with url quiery string 
