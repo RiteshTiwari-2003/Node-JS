@@ -245,3 +245,8 @@ basically api are internally it kind of function they are also return some logic
 3. http : http module is used to create a small and lightweight http server  in node. 
 4. url : the url module is used to parsing , manipulating and dealing with web address(url)
 5. quierystring : quiry string module is used to parse and work with url quiery string 
+
+in node js you can break up large piece of code into smaller piece called module , these module allow you to reude your code 
+while creating your module , one should try to seperate every module in seperate file ,this help inkeeping your code modulerized 
+
+
