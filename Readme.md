@@ -249,4 +249,15 @@ basically api are internally it kind of function they are also return some logic
 in node js you can break up large piece of code into smaller piece called module , these module allow you to reude your code 
 while creating your module , one should try to seperate every module in seperate file ,this help inkeeping your code modulerized 
 
+## what is npm ?
+npm is node js in built package manager , it allow developer to include package (code that other developers wrote ) in their project and use them 
 
+npm manages packages by installing the user specified version of the packages 
+
+npm is central repository which allows developer to share package they have written for common task such as validation and data access.
+npm also make project portable means you can easily share your code with other developer and they can also run your project by downloading the dependencies from npm. 
+
+## dependencies ?
+we use npm to install the packages that our project depend upon .these packages are called dependencies 
+npm allow us to manage these dependencies as well as dependencies of these dependencies , so if one of the package that we wish to use 
+depend on some other package then npm also download it for us 
