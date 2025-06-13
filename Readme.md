@@ -261,3 +261,19 @@ npm also make project portable means you can easily share your code with other d
 we use npm to install the packages that our project depend upon .these packages are called dependencies 
 npm allow us to manage these dependencies as well as dependencies of these dependencies , so if one of the package that we wish to use 
 depend on some other package then npm also download it for us 
+
+## event loop
+event loop is the part of node js runtime , it is the process that run constantly in the background ,
+it checks the call stack and cllback queue , if the call stack in empty and there is in the callback queue if any process present then it reove fro there and push in call stack like means if call stack is empty and there are tasks in callback queue , then the event loop 
+removes a task from the callback queue and pushes it into the callstack to be run 
+
+## callbacks
+callbacks are simply functions that contains some code that you wish to run after a long running task has been finished in the background
+callbacks are olden way of writting asynchronous cod eby passing functions as the argument of a long running task to be called later in the future 
+
+### disadvantage of callback 
+the major disadvantage of callback is that if have a lot of asynchronus code that run one after the another and you use callback then you run into a pro lem called as 'callback hell'.
+
+callback hell is simply multiple callback nested inside each other making your code difficult to read and understand 
+
+
