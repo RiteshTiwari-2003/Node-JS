@@ -378,4 +378,43 @@ multiplyEvnNumbers(8,10,function(error,result){
     }
 })
 
+error handling in promises 
+function multiplyEvenNumber(x,y,callback){
+    return new Promise(function(resolve,reject){
+        if(x%2!=0||y%2!=0){
+            setTimeout(function(){reject("odd Number")},2000);
+        }
+        else{
+            setTimeout(function(){resolve(x*y)},2000);
+        }
+
+    })
+}
+multiplyEvenNumber(7,9).then(function(x){console.log(x);}).catch(function(x){console.log(x);})
+
+and in  async await error handling done like this 
+
+function multiplyEvenNumber(x,y,callback){
+    return new Promise(function(resolve,reject){
+        if(x%2!=0||y%2!=0){
+            setTimeout(function(){reject("odd Number")},2000);
+        }
+        else{
+            setTimeout(function(){resolve(x*y)},2000);
+        }
+
+    })
+}
+async function multiply(x,y){
+    try{
+        const result= await multiplyEvenNumber(x,y)
+        console.log(result);
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+multiply(7,9);
+
+
 
