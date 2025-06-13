@@ -276,4 +276,52 @@ the major disadvantage of callback is that if have a lot of asynchronus code tha
 
 callback hell is simply multiple callback nested inside each other making your code difficult to read and understand 
 
+### promises
+so promises come after callbacks and are used to accomplish the same task as specifying some code to be run only after a long running task is finished 
+
+the reason that promise are considered better than callback is that instead of passing and nesting function inside one and another 
+proise allow to chain them in steps 
+
+promise chaining :
+to chain promise , you can use then method on the promise , each call to then method expects a function to be passed in to be run on the output that is returned by the previous then method .
+
+each promise may return smoe value that will be passed in the next then call.
+chaning promises make your code more relaiable concise and readable 
+
+it alow you to to work on asynchronous programming asa series of step by step instruction 
+
+## using promise with settieout function 
+function timer(time){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){resolve(time)},time);
+    })
+}
+timer(1000).then(function(time){console.log(`Done after ${time} second`)})
+
+## async await 
+async await is the latest addition to the javascript language to handle asynchronous code 
+
+using asunc await , instead of using the promise  and then method one after another chaining them
+you can use the just async keyword just before the function to return a promise and use the await keyword to wait for the promise resolve and pros=duce some result.
+
+async function logAfterWait(){
+    let promise=new Promise((resolve, reject)=>{
+        setTimeout(()=>resolve("done!"),1000);
+    });
+    let result=await promise;
+    console.log(result);
+}
+ogAfterWaiting();
+
+function timer(time){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){resolve(time)},time);
+    })
+}
+async function sleep(time){
+    let result=await timer(time);
+    console.log(result);
+}
+sleep(1000);
+
 
