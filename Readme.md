@@ -324,4 +324,27 @@ async function sleep(time){
 }
 sleep(1000);
 
+## asynchronous error handling 
+all the method of working with asynchronous code handle error differently 
+when using callback the function you passed as argument in the code may get called with 
+two argument , representing result and  error so if the error is not null then you perform error handling 
+
+function longRunningTask(url,callback){
+    const response=getDataFromInternet(url);
+    if (response==null){
+        callback({error:'some error occured'});
+    }
+    else{
+        callback(null,response);
+    }
+}
+longRunningTask('http://some-url.co',function(error,data){
+    if (error!=null){
+        console.log(error);
+    }
+    else{
+        console.log(data.json());
+    }
+})
+
 
