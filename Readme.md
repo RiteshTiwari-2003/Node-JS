@@ -347,4 +347,35 @@ longRunningTask('http://some-url.co',function(error,data){
     }
 })
 
+in promises at the end of the promise chain you pass the error handling function in a call to the .catch() method as an argument  this method is callled if there are any error during the execution of promise .
+getSomeData(url).then(data=>saveToDatabse(data)).catch(error=>console.log(error));
+
+in async await you can simply wrap your code in a try and catch block and handle the error in catch block it is very similer to exception handling 
+
+## performing error handling using callbacks 
+function multiplyEvenNumber(x,y,callback){
+    if(x%2!=0|| y%2!=0){
+        setTimeout(function(){callback("odd number")},2000);
+    }
+    else{
+        setTimeout(function(){callback(null,x*y)},2000);
+    }
+}
+multiplyEvenNumber(7,9,function(error,result){
+    if (error!=null){
+        console.error(error);
+    }
+    else{
+        console.log(result);
+    }
+})
+multiplyEvnNumbers(8,10,function(error,result){
+    if (error!=null){
+        console.error(error);
+    }
+    else{
+        console.log(result);
+    }
+})
+
 
