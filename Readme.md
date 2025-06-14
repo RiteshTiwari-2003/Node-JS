@@ -416,4 +416,34 @@ async function multiply(x,y){
 }
 multiply(7,9);
 
+## step to write event driven code 
+event driven code is little difficult to wrap our head around it , Follow the below steps to write event driven code 
+
+1. import the event module : first import the event module using require keyword 
+2. instantiate the event emitter : instantiate  a object of EventEmitter class from inside the event module 
+3. register a callback for event : on the instantiated object , register a callback to be called when an event is triggered 
+using the on method 
+4. trigger the event: trigger the event using emit method and pass in the name of event which will call the callback 
+
+the event emitter class in nodejs is used to create objects that can fire/emit event s and register callback that can handle those event 
+when an event is triggered on an object of the EventEmitter class , the object will call the callback that is registered for the event 
+by the user .
+
+## emitting the event :
+emitting event is pretty straightforward using the event emitter class 
+to emit an event we call the emit method on the EventEmitter object passing the evnt name as a argument and then the registered callback is called 
+
+### emitting and rsponding to the event :
+const events=require('events');
+const emitter=new events.EventEmitter();
+emitter.on('some-event',function(){
+    console.log("Some event called ");
+})
+console.log("before some event");
+emitter.emit('some-event')
+console.log("after some event");
+
+## 
+
+
 
