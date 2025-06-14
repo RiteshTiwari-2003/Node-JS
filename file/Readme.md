@@ -37,3 +37,21 @@ fs.readFile('sample.txt',function(err,data){
     }
     console.log(data.toString());
 })
+
+
+## to extract information fro file in node js we use fs.stat()
+to extract information about a file in node js comes with a simple method call fs.stat()
+the method takes a path to a file and a callback function which is called and passed the information about the file 
+the stat data expose some usefu information 
+1. uid: the numeric user identifier of the user that owns the file 
+2. gid: the numeric group identifier of the grou which owns the file 
+3. size: the size of file in bytes 
+4. atime: the timestamp indicating the last time the file was accessed 
+5. birthtime: the timestamp indicating the creation time of file 
+
+## file stats method 
+1. isDirectory(): return true if given path describe a file system directory 
+2. isFile(): return true if given path describe a regular file 
+3. isSocket(): return true if given path describe a network socket.
+4. isSymbolicLink(): return true if given path descibe a symobilc link.
+
