@@ -55,3 +55,133 @@ the stat data expose some usefu information
 3. isSocket(): return true if given path describe a network socket.
 4. isSymbolicLink(): return true if given path descibe a symobilc link.
 
+:: check if a given path is file or directory :
+const fs=require('fs');
+fs.stat('check',function(error,data){
+    if (error!=null){
+        console.log(error);
+        return;
+    }
+    if(data.isDirectory()){
+        console.log("Directory");
+    }
+    if(data.isFile()){
+        console.log("file");
+    }
+})
+fs.stat('sample.txt',function(error,data){
+    if (error!=null){
+        console.log(error);
+        return;
+    }
+    if(data.isDirectory()){
+        console.log("Directory");
+    }
+    if(data.isFile()){
+        console.log("file");
+    }
+})
+
+## node file watcher 
+node js allow us to watch file or directory for changes and respond to those changes if necessary 
+
+for example if we wish to monitor a file and if the content of the file are changed and saved then we can log it to the databse table 
+watch a file and log changes to the console 
+const fs=require('fs');
+fs.watchFile('sample.txt',function(cureent){
+    console.log("changes at:"+current.atime);
+})
+
+## watch a folder and logs changes to the console
+
+const fs=require('fs');
+fs.watch('check',function(event,data){
+    console.log(`${event} :${data}`)
+})
+where check is folder name in that same directory where this above script.js present 
+
+### printing the absolute path to the current file or directory 
+
+step 1 : create a file name constant.js  
+step 2 : open it in any text editior 
+step 3; type the following code :
+console.log(` the absolute path to the current directory is : ${__dirname}`);
+console.log(`the absolute path to the curent fil is : ${__filename}`)
+
+### reading the content of the synchronously 
+
+1. create a file name read_sync.js and a text file named sample.txt with some sample txt in it 
+
+2. open read_sync.js in any code editor and write these code 
+
+const fs=require('fs');
+console.log("done before reading file synchronously");
+const data=fs.readFileSync('sample.txt');
+console.og(data.toString());
+console.log("done after reading file synchronoously");
+
+### read the file asynchronously
+const fs=require('fs');
+console.log("done before reading file asynchronously");
+fs.readFile('sampe.txt',function(error,data){
+    if (error){
+        console.log(error);
+        return;
+    }
+    console.log(data.toString());
+})
+console.log("doen after reading file asynchronously");
+
+### checking if a given path is a file or directory
+
+step 1; create a file name is_directory_demo.js and another named sample.txt and folder name check all these three present in same folder or directory 
+
+open is_directory_demo.js in any text editor:
+type the following code 
+const fs=require('fs');
+fs.stat('check',(error,stats)=>{
+    if(error){
+        console.log(error);
+        return;
+    }
+    if (stats.isDirectory()){
+        console.log("given path is directory");
+    }
+    else if(stats.isFile()){
+        console.log("given path is file");
+    }
+});
+fs.stat('sample.txt',(error,stats)=>{
+    if(error){
+        console.log(error);
+        return;
+    }
+    if(stats.isDirectory()){
+        console.log("given path  is directory");
+    }
+    else if(stats.isFile()){
+        console.log("given path is file");
+    }
+})
+
+## monitor file and logs changes to the console 
+step 1: create two file named as file_watcher.js and sample.txt
+
+open file_watcher.js in any text editor and write this part of code 
+
+const fs=require('fs');
+fs.watchFile('sample.txt',(current)=>{
+    console.log("file was changed at"+current.atime);
+})
+
+## monitor directory and logs changes to the console
+
+create a file name dir_watcher.js and folder check
+
+in dir_watcher.js 
+
+const fs=require('fs');
+fs.watch('check',(event,filename)=>{
+    console.log(`${event}-${filename}`);
+})
+
