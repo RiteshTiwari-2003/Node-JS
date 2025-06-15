@@ -469,6 +469,39 @@ const stream=fs.createWriteStream('data.txt');
 stream.write(data);
 
 
+## stream event 
+besides reading from a readable stream source and writing to writable stream stream can also be consumed with event directly
+
+stream event allow us toi consume stream by executing some code defined in a callback when an event occur in a stream , like reaching the end of stream 
+
+here is the list of some impoetent stream event 
+data : the data event is fired when the stream passes a chunk of datato a consumer .
+end : the end event is fired when there is no more data to be consumed from the stream 
+drain: the drain signal denotes that writable stream can receive more data 
+finish: the finish event is emitted when all the data have been flushed to the underlying system 
+
+const fs=require('fs');
+const readStream=fs.createReadStream('sample.txt');
+const writeStream=fs.createWriteStream('data.txt');
+readStream.on('data',function(chunk){
+    writestream.write(chunk);
+})
+readStream.on('end',function(){
+    writeStream.end();
+})
+
+### emitting and responding to the event 
+step 1; create a file named event.js
+write these code in that file in any text editor 
+
+const events=require('events');
+const emitter=new events.EventEmitter();
+emitter.on('login',function(){
+    console.log("customer is logged");
+})
+console.log("Some code");
+emitter.emit('login');
+console.log("some more evnt");
 
 
 
