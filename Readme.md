@@ -503,5 +503,63 @@ console.log("Some code");
 emitter.emit('login');
 console.log("some more evnt");
 
+### reading data from a file usinf stream 
+create two file one is named read_from_file.js and one is sample.txt
+
+open the following filw read-from-file.js 
+const fs=require('fs');
+const readStream=fs.createReadStream('Sample.txt');
+readStream.on('data',function(data){
+    let chunk=data.toString();
+    console.og(chunk);
+})
+
+#### writing data to a file using stream 
+const fs=require('fs');
+const data="written using stream";
+const writeStream=fs.createWriteStream('demo.txt');
+writeStream.write(data);
+
+## processing stream event 
+const fs=require('fs');
+const readStream=fs.createReadStream('sample.txt');
+const writeStream=fs.createWriteStream('demo.txt');
+readStream.on('data',function(chunk){
+    console.log(`writing ${chunk} to a new file`);
+    writeStream.write(chunk);
+})
+readStream.on('end',()=>{
+    console.log("streamended");
+    writeStream.end();
+})
+
+## http in node js 
+http stands for hypertext transfer protocal it is a hypertext protocal that is used on internet .
+communication between client and server on the web is done on the internet using the http protocal 
+
+http header :
+http header are used to enable a client and server to pass the additional information with a http request and response 
+a http header thought of as key value pair that consist of case insensitive key folowed by a colom (:) and then by its value .
+
+## http response status code 
+http status code are 3 digit code that are sent by the server to a client within a response they indicate whether a response is completed successfully 
+
+the first  digit of response tell the class of response 
+
+### http response classes 
+there are five http response classes 
+1. 1XX: indicate that the requerst hS BEEN received and the process is continuing .
+2. 2XX: shows that the action is successfully reseived understood and accepted 
+3. 3XX: indicates that further action must be taken in order to complete the request .
+4. 4XX: tells that the request contains incorrect syntex or cannnot be fullfilled 
+5. 5XX: tells that the server has failed to fullfill an apperently valid request 
+
+## node http module
+node js has build in module called http, which allow node js to transfer data over the hypertext transfer protocal 
+the http module can be used to create an http server that can listen to requests on a specified port and responde to that requests 
+
+### creating a http server 
+
+
 
 
