@@ -443,7 +443,32 @@ console.log("before some event");
 emitter.emit('some-event')
 console.log("after some event");
 
-## 
+## stream
+stream can be thought of as a collection of data, this collection can be either small or large 
+streams allow us to consume data from external source to small chunks 
+
+## types of stream
+
+there are four type of stream in node 
+writable : ther are stream to which we can write data e.g. file stream
+readable : thier are stream from whcih we can read the data e.g. fileStream 
+duplex : there are stream from/to which we can read / write data simultaniously e.g. socket 
+transform   these are duplex stream which mdify or transform as it is wrten or read 
+
+## reading data from afile using stream 
+const fs=require('fs');
+const stream=createReadStream('sample.txt');
+stream.on('data',function(data){
+    console.log(data.toString());
+})
+
+## writing data in stream 
+const fs=require('fs');
+const data="this is my node js tutorial";
+const stream=fs.createWriteStream('data.txt');
+stream.write(data);
+
+
 
 
 
