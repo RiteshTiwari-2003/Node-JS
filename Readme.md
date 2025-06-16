@@ -559,6 +559,24 @@ node js has build in module called http, which allow node js to transfer data ov
 the http module can be used to create an http server that can listen to requests on a specified port and responde to that requests 
 
 ### creating a http server 
+const http=require('http');
+http.createServer((req,res)=>{
+    res.writeHead(200,{'content-type':'text/plain'});
+    res.write('Hello. World');
+    res.end();
+}).listen(8000);
+
+## http form data 
+using the http protocal , users can also send the data submitted via form 
+this form can be used to submit login credential complaint and so on. form data send to the server inside the reqquest nd can be parsed by the server to extract the user sumit data
+
+## http form data request type 
+there are two type of request we can use to submit a form with the http protocal 
+get and post 
+1. get : a get request gets data from the form encode it in the url as per quiery string parameters ,
+and send it to the server the data sent using the get request is visible in url..
+
+2. post : a post request get dataq from form , encode it , and send it to the server in the request the data send using the post request not visible into the url.
 
 
 
