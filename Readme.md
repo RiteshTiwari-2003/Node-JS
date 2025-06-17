@@ -578,6 +578,7 @@ and send it to the server the data sent using the get request is visible in url.
 
 2. post : a post request get dataq from form , encode it , and send it to the server in the request the data send using the post request not visible into the url.
 
+like in mongo with node js for database i use mongo db mongo db is a unstructured database in which i use no sql data in which no any schema rule and regulation present.
 
 
 
