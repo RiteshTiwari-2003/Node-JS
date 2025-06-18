@@ -584,6 +584,32 @@ like in mongo with node js for database i use mongo db mongo db is a unstructure
 query string is used to pass the data from a client to the server by encoding data in the url 
 they can be thought of as key/value pair that are encoded in url 
 
+node js comes with a built in query string module that allow us to deal with query string inside our node application 
+the query string module contain a number of built in method that deals with encoding and decoding url 
+
+# query string methods 
+there are six type of query struing methid 
+
+encode: the encode method producess a url query string from a given object by iterating through the object 
+decode ; the decode method parses a url query string into a collection of key value pair
+3. escape method ; the escape method perform url encoding on a given string , it is used internally by the stringify , and encode method 
+4. parse: it is just alias for decode method of the query string module 
+5. stringify; it is just alias for encode method of the query string module 
+6 . unscape ; it perform url decoding on a given string , it is used by internally by parse and decode method 
+
+encoding query string 
+const querystring=require('querystring');
+const data={
+    'name':'abcd',
+    'password':'efgh'
+};
+console.log(querystring.encode(data));
+
+decoding querystring 
+const querystring=require('querystring');
+const qs='name=sample&password=sampe'
+const data=querystring.decode(qs)
+console.log("Name:",data.name);
 
 
 
