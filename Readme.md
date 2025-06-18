@@ -580,5 +580,11 @@ and send it to the server the data sent using the get request is visible in url.
 
 like in mongo with node js for database i use mongo db mongo db is a unstructured database in which i use no sql data in which no any schema rule and regulation present.
 
+### query string 
+query string is used to pass the data from a client to the server by encoding data in the url 
+they can be thought of as key/value pair that are encoded in url 
+
+
+
 
 
