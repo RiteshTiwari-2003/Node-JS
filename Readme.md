@@ -759,3 +759,13 @@ app.use(express.static(public'));
 
 7 . third party middle ware :
 body parser , cors , morgan, cookie parser 
+
+http request method ;
+so there are seven http request method;
+1. GET: the get method is used to request the server to return some data , either a collection or an entity 
+2. post: the post method is used to submit the data to the server either for saving or for further processing 
+3. the put method : the put method is used to send some data to completely replace an entity on the server 
+4. patch ; patch method is used to send some data to partially replace an entity on the server 
+5. delete ; delete method is used to delete an entity on the server 
+6. options; options methos is used to describe the communication option for the taget resources 
+7. head ; the head method is used to get the response same aa get method but without the response body 
