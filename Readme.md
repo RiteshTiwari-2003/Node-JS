@@ -791,3 +791,36 @@ app.listen(8000,()=>{
 })
 
 now in terminl when you run node <file_name>  then "listen on port number 8000" come and when in browser you go onto localhost:8000  then home page come on that page and when you go on localhost:8000/about then About us come like this 
+## template engine  
+there are many template engine on npm , and they all can be integreted with express js here are the some of the most populer ones 
+ejs (embedded javascript)
+ejs stands for enbeded javascript it is the one of the easiest template engine  <%=ejs%>
+
+mustachejs: it is the most populer template engine that work for  number of programming language such as js , nodejs etc
+
+handlebarsjs: handlebars is also populer templlate engine like mustachejs it is the superset of mustachejs withsome additional feature 
+nunjucks : it is developed by mozilla and is an extrememly powerful template engine its syntex is inspired by python jinja2 template 
+pug: pug is the most powerful template engine among the express js community , it was previously known as jade
+
+ejs tempate like install go into node js project and run this command   npm install ejs --save 
+
+const express=require('express');
+const app=express();
+app.set('view engine','ejs');
+app.get('/',(req,res)=>{
+    res.render('index.ejs',{'name':'john Due'})
+
+})
+app.listen(8000,()=>{
+    console.log(")
+})
+and in same directory make a one more file index.ejs 
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form </title>
+</head>
+<body>
+<p><%=name%></p>
+</body>
