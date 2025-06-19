@@ -611,6 +611,92 @@ const qs='name=sample&password=sampe'
 const data=querystring.decode(qs)
 console.log("Name:",data.name);
 
+### create an http server
+step 1: create a fi;e name called http-server.js
+
+step 2; open it in any text editor 
+step 3; type the following code 
+
+cosnt http=require('http');
+http.createServer((req,res)=>{
+    res.writeHead(200,{'Content-Type':'text/plane'});
+    res.write ("hello world!");
+    res.end();
+
+}).listen(8000);
+
+### process form data
+
+step 1: make two file form-process.js and form.html  
+in form.html place this code  
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scalle=1.0">
+<title>Form</title>
+</head>
+<body>
+<form action="/" method="POST">
+<input type="text" name="username" placeholder="username"/>
+<input type="password" name="password" placeholder="password"/>
+<input type="submit"/>
+</form>
+</body>
+</html>
+
+and form-process.js
+const http=require("http");
+const fs=require("fs");
+http.createServer((req,res)=>{
+    if(req.method="POST"){
+        let body='';
+        req.on('data',chunk=>{
+            body+=chunk.toString();
+        });
+        req.on("end",()=>{
+            console.log(body);
+            res.end("ok");
+        })
+    }
+    else{
+        fs.readFile('./form.html',(err,data)=>{
+            res.end(data);
+        })
+    }
+}).listen(8000);
+
+### encode a querystring
+const querystring=require('querystring');
+const data={
+    'name':'myname',
+    'password':'mypassword'
+};
+console.log(querystring.encode(data));
+
+## decode querystring
+const querystring=require('querystring');
+const qs="name=ritesh&password=sape";
+console.log(querystring.decode(qs));
+
+### express js 
+express js is webapplication development framework  based on node js 
+its take care of lots of common task that we need to perform if we were to huild a web application in node js ,
+such as parsing request , routing error handling 
+
+express js provide many benifit like 
+fast : express js is small framework and does not slow down an application 
+minimal: it provide sonly the funcdamental web application feature 
+un-opinioneted ; express js does not have default configuration so we can sructure our application as we wish it to be
+simple: it is very simple and easy to use 
+un-obtrusive: we can set up expres js however we want and use it with any library of choice 
+
+## installing express js 
+since wea re using node js , we will need to install express using npm , to install express in node application , first , we have to generate an npm project uisng the command "npm init -y"
+
+ after generating the project we woul run the command "npm install express --save"
+ here we have to make sure that we are using the "--save " flag or not the "--save-dev" flag as we need exprees js for application to rn
+
 
 
 
