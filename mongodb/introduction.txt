@@ -93,6 +93,38 @@ mongodb (no validaion , no type cheking , no schema ) there is alsoone library m
 
 mongoose library internally used mongo db 
 
+mongo db is a document oriented , no sql databse management system 
+since mongo db is nosql database we do not need to provide the schema and we can insert the data of any shape in a document
+
+why should be use mongo db
+
+1. fast : mpngp db provide high speed reads and write to collection and document 
+2. flexible : since mongo db is schea less it provides the flexibility of inserting a record in any shape 
+3. no joins : in mongo db , we can nest collection so we dont have to perform complex join quiries to get result 
+4. easy to use : mongo db uses query language that is similer to javascript , and it is very easy to understand 
+5. scalable : mongo db is very easy scale horizentaly i . e. distributing data across a cluster of large number of server 
+
+what are documents in mongo db?
+a document in mongo db is a record in a collection
+data is stored inside document in a json format called bson or binary javascript object notation 
+
+what are collections into mongodb ?
+
+in mongo db , data is stored inside a document and these document are grouped inside a collection .
+we can thing that document as a record or row and collection as a table in sql 
+
+mongo data types :
+mongo db support  all data type which are supported by json with some additional data type 
+1. Integer; integer are used to store whole number depending upon our server these can be 32 bits and 64 bits .
+2. Double : Doubles are used store floating point number
+3. timestamp : timestamp are used to record when a document has been created or modified 
+4. binarry data : it stores binary data such as images etc 
+0110
+1001
+1010
+5. object id : object id is a spaical data type that store the unique id of document 
+6. null ; null is a data type that is used to represent the absence of data 
+
 
 
 
