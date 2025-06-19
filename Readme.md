@@ -698,5 +698,64 @@ since wea re using node js , we will need to install express using npm , to inst
  here we have to make sure that we are using the "--save " flag or not the "--save-dev" flag as we need exprees js for application to rn
 
 
+### express js has several component 
+1. request : express js build request object automatically which gets populated with importent data suc as header method etc
+2. response : express also build response object which is a http response that gets sent back to user.
+3. middleware: middleware is the function that gets called during the request response cycle and has access to request response object 
+4. error handling : express come with a default error handler that will catch any type of synhronous and asynchronous error 
+5. template : since express js is un opinianated so we can use any templating language like ejs, jade etc.
+6. database : we can connect any database with the help of our express js app by loading an appropriate node js driver for the database 
 
+what is template engine in express js ?
 
+in express js a template is a way to dynamically generate html page on server side using data , it allows youto :
+embeded javascript logic in html 
+render dynamic content like (variables loop condition )
+avoid writting repetative html code 
+common template engine in express js 
+ejs
+pug 
+handlebars 
+mustache 
+
+const express =require("express");
+const app=express();
+app.set('view engine','ejs');//seting ejs as a template engine 
+app.get('/',(req,res)=>{
+    res.render('index',{name:'ritesh'});//passing dynamic data 
+})
+app.listen(3000,()=>{
+    console.log('server running on port 3000');
+})
+
+html
+<h1> Welcome, <%=name%></h1>
+
+component of express js 
+1. routing :
+define how the server responde to the request (GET,Post/...)
+app.get('/about',(req,res)=>{
+    res.send("about page");
+})
+
+2. middleware ;
+function that execute during the request response cycle 
+used for logging , authentication ,parsing request bodies 
+app.use(express.json());
+3. request and response object :
+(req,res)
+req: contain informtion about the http request 
+res : used to send back the desired http response
+
+4. template engine:
+used to render dynamic html content 
+5. error handling : custom ogic for handling errors 
+app.use((err,req,res,next)=>{
+    res.status(500).send("something broke!");
+})
+6. static files :
+serving static assets like html csss js images 
+app.use(express.static(public'));
+
+7 . third party middle ware :
+body parser , cors , morgan, cookie parser 
