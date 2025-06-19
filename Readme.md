@@ -769,3 +769,25 @@ so there are seven http request method;
 5. delete ; delete method is used to delete an entity on the server 
 6. options; options methos is used to describe the communication option for the taget resources 
 7. head ; the head method is used to get the response same aa get method but without the response body 
+
+hands on on routing in express js and node js 
+
+const express=require('express');
+const app=express();
+app.get('/',(req,res)=>{
+    res.end("Home page ");
+});
+app.get('/about',(req,res)=>{
+    res.end("About us");
+});
+app.get('/services',(req,res)=>{
+    res.end("Services");
+});
+app.get('/help',(req,res)=>{
+    res.end("help");
+});
+app.listen(8000,()=>{
+    console.log("Listen on port number 8000");
+})
+
+now in terminl when you run node <file_name>  then "listen on port number 8000" come and when in browser you go onto localhost:8000  then home page come on that page and when you go on localhost:8000/about then About us come like this 
