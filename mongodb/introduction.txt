@@ -125,6 +125,81 @@ mongo db support  all data type which are supported by json with some additional
 5. object id : object id is a spaical data type that store the unique id of document 
 6. null ; null is a data type that is used to represent the absence of data 
 
+hands on crud operation 
+
+like open mongo db cell 
+and type this command " show collections;" it show all collection which currently present in your mongo db
+> show collections 
+sample (it means cutrently in my mongo db database one collection present which is sample collection )
+like if you want to create new collection then you want to run this command db.createCollection('users')  it means you create a collection named users
+>db.createCollection('users')
+{"ok":1}, it means this acknowledgement come when you run above command it means collection created successfully 
+>show collections 
+sample
+users 
+>db.users.find()
+>db.users.insertOne({name:"John",age:21})
+we have inserted one document let insert another 
+>db.users.insertOne({name:"deepa",age:31})
+now run this command 
+>db.users.find()
+then as a out put both document come with object id which i have created 
+>db.users.updateOne({name:"john"},{$set:{name:"Jhon"}})
+>db.users.updateMany({age:{$gt:18}},{$set:{age:25}});
+>db.users.deleteOne({name:"John"});
+
+like if you wan also delete the collection like users then write this below command 
+>db.users.drop();
+
+
+as express js is not opinionated so we can use mongo db database quitly quikly 
+using mongo db with express or any node js application ,we can use ne of the many npm packages two of them are native mongodb driver and mongoose package 
+
+#### native mongo db driver
+the native mongo db driver is the npm package that allow us to directly interact with our mongodb server , it is created by the mongo db team 
+to allow application to interact with mongo db server very much like using mongo db shell 
+
+why use native mongo db url 
+so there are several issue that using the mongo db driver 
+1. fast : as it is very thin abstraction it provides really good performance 
+2. easy : using mongo db driver is very easy as it make use of same syntex that is used in mongo db shell
+3. schema less: we can use query without using predefined schema for our collection and document 
+
+### hands on : mondo db driver hands on 
+const MongoClient=require('mongodb').MongoClient;
+const assert=require('assert');
+const url="mongodb://localhost:27017";
+const dbName="MyProject";
+const client=new MongoClient(url,{useNewUrlParser:true,useUnifiedTopology:true});
+client.connect(function(error){
+    assert.equal(err,null);
+    console.log("Connected Successfully");
+    const db=client.db(dbName);
+    const collection=db.collection("users");
+    const data=[{name:"john",age:30},
+    {name:"janu",age:50},
+    {name:"manu",age:80}];
+    collection.insertMany(data,function(error,result){
+        assert.equal(error,null);
+        console.log(result);
+        client.close();
+    });
+})
+###  mongoose 
+the mongoose package is odm (object data mapper )
+it allow us to define schema and models and instead of interacting with the database directly we can just interact with the model instance 
+
+and the mongoose will issues the quiries
+
+#### why use mongoose ?
+there are several benifits of using mongoose 
+1. speed : with all the additional benifits mongoose still provides the very good data acess speed .
+2. schema : we can inforce strict schema validation to keep our data in a normalized state .
+3. validation : monggose take validation of rules defined in schema definition
+4, utilities : mongoose has several built in method that allow us to run custom code on successfull query execution 
+5. reduce effort: mongoose greatly reduce the time it takes for developer to  build an application .
+
+
 
 
 
