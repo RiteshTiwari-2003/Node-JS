@@ -200,6 +200,25 @@ there are several benifits of using mongoose
 5. reduce effort: mongoose greatly reduce the time it takes for developer to  build an application .
 
 
+const mongoose = require('mongoose');
+const assert=require('assert');
+mongoose.connect("mongodb://localhost:27017/MyProject",{useNewUrlParser:true,useUnifiedTopology:true});
+const useSchema=new mongoose.Schema({
+    name:String,
+    age:Number,
 
+});
+const User=mongoose.model("User",useSchema);
+const data=[
+    new User({name:"chitwan",age:30}),
+    new User({name:"janhvi",age:50}),
+    new User({name:"shashwat",age:61}),
+    new User({name:"Ganpati",age:16})
+];
+User.insertMany(data,(err,result)=>{
+    assert.equal(err,null);
+    console.log(result);
+    mongoose.connection.close();
+})
 
 
