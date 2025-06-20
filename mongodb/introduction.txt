@@ -222,3 +222,8 @@ User.insertMany(data,(err,result)=>{
 })
 
 
+#### waht is a testing ?
+testing in software development is writting code to verify wheather some functionality works as expectewd or not 
+
+testing is basically use for larger application where we wish to verify the application is working 
+een after certain change were made to some part og the application
