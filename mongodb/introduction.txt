@@ -290,3 +290,34 @@ decoupled : application are decomposed into several decoupled services whivh int
 3. ease of change : each service could be changed and implemented in new technology without any issue 
 deployment: microservice architecture enables each microservice to be deployed independently 
 scalability ; microservice architecture enables each service to be scaled independently.
+
+#### hands on on microservice architecture :
+ install express and axios axios is basically use as http service like when we need to take some data from other another service 
+ index .js
+ const express=require('express');
+ const app=express();
+ const axios=require('axios');
+ app.get('/greeting',async (req,res)=>{
+    const name=req.query['name'];
+    const response =await axios.get(`http://localhost:8001?name=${name}`);
+    conole.log(response);
+    res.status(200).send(response.data);
+
+ });
+ app.listen(8000,()=>{
+    console.log('listening on port 8000');
+ })
+ and open vs code and make another index.js 
+ const express=require('express');
+ const app=express();
+ app.get('/',(req,res)=>{
+    const name=req.query['name'];
+    res.status(200).send(`Hello, ${name}`);
+ });
+ app.listen(8001,()=>{
+    console.log('listning on port 8001');
+ })
+ so when you  run node index.js then listning on 8000 come and in browser when you 
+ put this url like  
+ an also run second index.js which run on 8001 and search url put this like localhost:8000/greeting?name=John 
+ then output come like this like hello, john
