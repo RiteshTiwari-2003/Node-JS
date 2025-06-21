@@ -227,3 +227,34 @@ testing in software development is writting code to verify wheather some functio
 
 testing is basically use for larger application where we wish to verify the application is working 
 een after certain change were made to some part og the application
+
+### what is rest api ?
+Rest stand for representational state transfer , a rest api is a application programming interface that folows 
+rest architectural principles to allow communication between server and client over http.
+
+1. it uses standerd http method (like get, post, put, delete).
+2. it deals with the resources usually represented in json format 
+3. each resource is accessed via a url?uri.
+4. it is stateless, the server does not store any session every request contain all the data needed .
+
+#### what is restful api?
+restful api is just another term for a rest api that properly follow all rest principe .
+you can say : rest api is a general term .
+restful api is more strict ,implying the api is fully following rest principles
+
+## application architecture 
+application architecture means about structuring different service or feature in applications 
+so that they interact with each other in the most efficient way .
+
+there are several way to architect your application main two are these 
+monolith and microservice 
+
+### monolith archtecture 
+monolith architecture are used when all the service are grouped in a single application packages 
+all the service in the package are all compiled , run and deployed together .
+
+there are several advantage of using monolith architecture 
+1 development : develoment of application is quit easy as all the services are centralized in one package
+2. testing : testing of application is also very easy as end to end test can be run ver easiy with all service running 
+3. deployment : deployment of the entire package is easier as it simply require us to build the package and move it to theb server 
+ 
