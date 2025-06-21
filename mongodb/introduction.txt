@@ -258,3 +258,21 @@ there are several advantage of using monolith architecture
 2. testing : testing of application is also very easy as end to end test can be run ver easiy with all service running 
 3. deployment : deployment of the entire package is easier as it simply require us to build the package and move it to theb server 
  
+4. scalability: scalling an application horizentally is easy by running multiple copy on a cluster of systems behind a load balancer .
+
+hands on - monolith architecture 
+greet-service.js
+const greet = name=>`Hello, ${name}`;
+module.exports={greet};
+
+index.js 
+
+const express=require('exprress');
+const app=express();
+const greetingService=require('./greet-service.js');
+app.get('/',(req,res)=>{
+    const name=req.query['name'];
+    res.status(200).send(greetingService.greet(name));
+
+});
+app.listen(8000,()=>{console.log("Listning on port 8000")});
