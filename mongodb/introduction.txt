@@ -276,3 +276,17 @@ app.get('/',(req,res)=>{
 
 });
 app.listen(8000,()=>{console.log("Listning on port 8000")});
+
+### microservice architecture 
+microservice architecture is used by seperating service into their own seperate package so that 
+they can be changes independently of each other 
+
+in microservice architecture this services are seperated from each other but can communicate with each other 
+over an agreed upon protocal like rest rpc etc.
+
+### advantage of microservice architecture 
+decoupled : application are decomposed into several decoupled services whivh interct with each other.
+2. independence : each service ca be independently developed with different teams 
+3. ease of change : each service could be changed and implemented in new technology without any issue 
+deployment: microservice architecture enables each microservice to be deployed independently 
+scalability ; microservice architecture enables each service to be scaled independently.
